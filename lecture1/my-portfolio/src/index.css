@@ -1,0 +1,59 @@
+/* CSS 변수 정의 - 컬러 팔레트 디자인 시스템 */
+:root {
+  /* Primary Colors */
+  --color-primary: #1A1A1A;
+  --color-primary-light: #333333;
+  --color-primary-dark: #000000;
+
+  /* Secondary Colors */
+  --color-secondary: #5B9BD5;
+  --color-accent: #F06292;
+
+  /* Background Colors */
+  --color-bg-primary: #F5F0E8;
+  --color-bg-secondary: #1A1A1A;
+
+  /* Text Colors */
+  --color-text-primary: #1A1A1A;
+  --color-text-secondary: #FFFFFF;
+  --color-text-muted: #888888;
+
+  /* Interactive Colors */
+  --color-button-primary: #5B9BD5;
+  --color-button-hover: #4A90D9;
+  --color-link: #5B9BD5;
+  --color-link-hover: #4A90D9;
+}
+
+/* CSS 초기화 */
+* {
+  box-sizing: border-box;
+}
+
+/* HTML, Body 초기화 */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+}
+
+/* Root 앱 컨테이너 설정 */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-link-hover);
+}
