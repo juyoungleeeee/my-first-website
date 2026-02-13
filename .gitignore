@@ -1,0 +1,10 @@
+# 비밀정보 포함 파일
+.mcp.json
+내 정보.txt
+
+# 로그 파일
+logs/
+
+# 환경 설정
+.env
+.claude/
