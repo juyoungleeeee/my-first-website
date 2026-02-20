@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { useAuth } from './hooks/useAuth';
 import LoginPage from './pages/login-page';
 import RegisterPage from './pages/register-page';
@@ -10,7 +10,7 @@ function App() {
   const { currentUser, login, logout } = useAuth();
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path='/' element={<Navigate to='/posts' replace />} />
         <Route path='/login' element={<LoginPage onLogin={login} />} />
@@ -28,7 +28,7 @@ function App() {
           element={<PostDetailPage currentUser={currentUser} onLogout={logout} />}
         />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
