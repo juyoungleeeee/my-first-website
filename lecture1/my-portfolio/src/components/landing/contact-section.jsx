@@ -338,7 +338,10 @@ function ContactSection() {
                     <Rating
                       value={ form.rating }
                       onChange={(_, val) => setForm({ ...form, rating: val || 0 })}
-                      sx={{ color: '#FFD740' }}
+                      sx={{
+                        color: '#FFD740',
+                        '& .MuiRating-iconEmpty': { color: 'rgba(255, 215, 64, 0.45)' },
+                      }}
                     />
                   </Box>
 
