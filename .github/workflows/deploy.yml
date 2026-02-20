@@ -31,15 +31,25 @@ jobs:
           npm install
           npm run build
 
+      - name: Build my-community
+        run: |
+          cd lecture1/my-community
+          npm install
+          npm run build
+
       - name: Prepare deploy directory
         run: |
           mkdir -p _site
           # 기존 정적 파일 복사 (루트 레벨)
           cp -r *.html *.css *.js assets images _site/ 2>/dev/null || true
           cp -r lecture1 _site/lecture1
-          # React 빌드 결과물로 교체
+          # my-portfolio React 빌드 결과물로 교체
           rm -rf _site/lecture1/my-portfolio/src _site/lecture1/my-portfolio/node_modules _site/lecture1/my-portfolio/public
           cp -r lecture1/my-portfolio/dist/* _site/lecture1/my-portfolio/
+          # my-community React 빌드 결과물로 교체
+          rm -rf _site/lecture1/my-community/src _site/lecture1/my-community/node_modules _site/lecture1/my-community/public
+          mkdir -p _site/lecture1/my-community
+          cp -r lecture1/my-community/dist/* _site/lecture1/my-community/
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
