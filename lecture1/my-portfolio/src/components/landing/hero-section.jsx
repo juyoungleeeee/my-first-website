@@ -15,8 +15,7 @@ function HeroSection() {
   return (
     <Box
       sx={{
-        backgroundColor: 'var(--color-bg-secondary)',
-        color: 'var(--color-text-secondary)',
+        backgroundColor: '#FDE8F0',
         py: { xs: 8, md: 12 },
         textAlign: 'center',
       }}
@@ -27,7 +26,7 @@ function HeroSection() {
           sx={{
             fontSize: { xs: '2rem', md: '3rem' },
             fontWeight: 700,
-            color: '#FFFFFF',
+            color: 'var(--color-text-primary)',
             mb: 2,
           }}
         >

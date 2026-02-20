@@ -82,7 +82,7 @@ function ContactSection() {
   return (
     <Box
       sx={{
-        backgroundColor: 'var(--color-bg-secondary)',
+        backgroundColor: '#FDE8F0',
         py: { xs: 8, md: 12 },
       }}
     >
@@ -93,7 +93,7 @@ function ContactSection() {
           sx={{
             fontSize: { xs: '1.8rem', md: '2.2rem' },
             fontWeight: 700,
-            color: 'var(--color-text-secondary)',
+            color: 'var(--color-text-primary)',
             textAlign: 'center',
             mb: 1,
           }}
@@ -117,15 +117,15 @@ function ContactSection() {
           <Grid size={{ xs: 12, md: 5 }}>
             <Card
               sx={{
-                backgroundColor: 'rgba(255,255,255,0.05)',
-                border: '1px solid rgba(255,255,255,0.1)',
+                backgroundColor: '#ffffff',
+                border: '1px solid rgba(0,0,0,0.08)',
                 borderRadius: 3,
               }}
             >
               <CardContent sx={{ p: { xs: 3, md: 4 } }}>
                 <Typography
                   variant='h6'
-                  sx={{ color: 'var(--color-text-secondary)', fontWeight: 700, mb: 3 }}
+                  sx={{ color: 'var(--color-text-primary)', fontWeight: 700, mb: 3 }}
                 >
                   연락처 정보
                 </Typography>
@@ -150,18 +150,18 @@ function ContactSection() {
                     <Typography variant='caption' sx={{ color: 'var(--color-text-muted)', display: 'block' }}>
                       이메일
                     </Typography>
-                    <Typography variant='body2' sx={{ color: 'var(--color-text-secondary)', fontWeight: 500 }}>
+                    <Typography variant='body2' sx={{ color: 'var(--color-text-primary)', fontWeight: 500 }}>
                       your@email.com
                     </Typography>
                   </Box>
                 </Box>
 
-                <Divider sx={{ borderColor: 'rgba(255,255,255,0.1)', mb: 3 }} />
+                <Divider sx={{ mb: 3 }} />
 
                 {/* SNS 링크 */}
                 <Typography
                   variant='h6'
-                  sx={{ color: 'var(--color-text-secondary)', fontWeight: 700, mb: 2 }}
+                  sx={{ color: 'var(--color-text-primary)', fontWeight: 700, mb: 2 }}
                 >
                   SNS
                 </Typography>
@@ -174,10 +174,11 @@ function ContactSection() {
                     sx={{
                       width: 52,
                       height: 52,
-                      backgroundColor: 'rgba(255,255,255,0.1)',
-                      color: 'var(--color-text-secondary)',
+                      backgroundColor: 'rgba(0,0,0,0.06)',
+                      color: 'var(--color-text-primary)',
                       '&:hover': {
                         backgroundColor: 'var(--color-secondary)',
+                        color: '#fff',
                         transform: 'translateY(-2px)',
                       },
                       transition: 'all 0.2s',
@@ -193,10 +194,11 @@ function ContactSection() {
                     sx={{
                       width: 52,
                       height: 52,
-                      backgroundColor: 'rgba(255,255,255,0.1)',
-                      color: 'var(--color-text-secondary)',
+                      backgroundColor: 'rgba(0,0,0,0.06)',
+                      color: 'var(--color-text-primary)',
                       '&:hover': {
                         backgroundColor: '#E1306C',
+                        color: '#fff',
                         transform: 'translateY(-2px)',
                       },
                       transition: 'all 0.2s',
@@ -213,15 +215,15 @@ function ContactSection() {
           <Grid size={{ xs: 12, md: 7 }}>
             <Card
               sx={{
-                backgroundColor: 'rgba(255,255,255,0.05)',
-                border: '1px solid rgba(255,255,255,0.1)',
+                backgroundColor: '#ffffff',
+                border: '1px solid rgba(0,0,0,0.08)',
                 borderRadius: 3,
               }}
             >
               <CardContent sx={{ p: { xs: 3, md: 4 } }}>
                 <Typography
                   variant='h6'
-                  sx={{ color: 'var(--color-text-secondary)', fontWeight: 700, mb: 3 }}
+                  sx={{ color: 'var(--color-text-primary)', fontWeight: 700, mb: 3 }}
                 >
                   방명록 남기기 📝
                 </Typography>
@@ -249,7 +251,6 @@ function ContactSection() {
                     onChange={ handleChange }
                     fullWidth
                     size='small'
-                    sx={inputStyle}
                   />
 
                   {/* 메시지 */}
@@ -263,7 +264,6 @@ function ContactSection() {
                     rows={3}
                     size='small'
                     placeholder='하고 싶은 말을 자유롭게 남겨주세요!'
-                    sx={inputStyle}
                   />
 
                   {/* 이메일 (선택) */}
@@ -275,7 +275,6 @@ function ContactSection() {
                     fullWidth
                     size='small'
                     placeholder='비공개로 저장됩니다'
-                    sx={inputStyle}
                   />
 
                   {/* 한마디 키워드 */}
@@ -292,10 +291,9 @@ function ContactSection() {
                           onClick={() => setForm({ ...form, keyword: form.keyword === kw ? '' : kw })}
                           sx={{
                             cursor: 'pointer',
-                            backgroundColor: form.keyword === kw ? 'var(--color-secondary)' : 'rgba(255,255,255,0.1)',
-                            color: 'var(--color-text-secondary)',
-                            borderColor: 'transparent',
-                            '&:hover': { backgroundColor: 'rgba(91,155,213,0.4)' },
+                            backgroundColor: form.keyword === kw ? 'var(--color-secondary)' : 'rgba(0,0,0,0.06)',
+                            color: form.keyword === kw ? '#fff' : 'var(--color-text-primary)',
+                            '&:hover': { backgroundColor: 'rgba(91,155,213,0.25)' },
                           }}
                         />
                       )) }
@@ -319,7 +317,7 @@ function ContactSection() {
                             borderRadius: 1,
                             border: '2px solid',
                             borderColor: form.emoji === em ? 'var(--color-secondary)' : 'transparent',
-                            backgroundColor: form.emoji === em ? 'rgba(91,155,213,0.2)' : 'transparent',
+                            backgroundColor: form.emoji === em ? 'rgba(91,155,213,0.15)' : 'transparent',
                             transition: 'all 0.15s',
                             '&:hover': { transform: 'scale(1.2)' },
                           }}
@@ -340,7 +338,7 @@ function ContactSection() {
                       onChange={(_, val) => setForm({ ...form, rating: val || 0 })}
                       sx={{
                         color: '#FFD740',
-                        '& .MuiRating-iconEmpty': { color: 'rgba(255, 215, 64, 0.45)' },
+                        '& .MuiRating-iconEmpty': { color: 'rgba(180,180,180,0.6)' },
                       }}
                     />
                   </Box>
@@ -370,17 +368,5 @@ function ContactSection() {
     </Box>
   );
 }
-
-/** 다크 배경용 TextField 스타일 */
-const inputStyle = {
-  '& .MuiOutlinedInput-root': {
-    color: '#fff',
-    '& fieldset': { borderColor: 'rgba(255,255,255,0.2)' },
-    '&:hover fieldset': { borderColor: 'rgba(255,255,255,0.4)' },
-    '&.Mui-focused fieldset': { borderColor: 'var(--color-secondary)' },
-  },
-  '& .MuiInputLabel-root': { color: 'var(--color-text-muted)' },
-  '& .MuiInputLabel-root.Mui-focused': { color: 'var(--color-secondary)' },
-};
 
 export default ContactSection;
